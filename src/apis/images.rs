@@ -43,13 +43,13 @@ pub struct ImagesEditBody {
 	pub images_body: ImagesBody,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Images {
 	pub created: u64,
 	pub data: Option<Vec<ImageData>>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct ImageData {
 	pub url: String,
 }
